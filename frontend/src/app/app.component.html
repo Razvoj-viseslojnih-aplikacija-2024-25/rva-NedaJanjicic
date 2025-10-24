@@ -1,0 +1,54 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav mode="side" opened fixedInViewport="true">
+    <mat-accordion>
+      <!-- HOME dugme -->
+      <a mat-button routerLink="/home" style="text-align: center; width: 100%;">
+        <mat-icon>home</mat-icon>
+      </a>
+
+      <!-- Sekcija: Aplikacija -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Aplikacija </mat-panel-title>
+          <mat-panel-description>
+            Upravljanje bioskopima, salama, filmovima i rezervacijama
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-raised-button routerLink="/bioskop" style="background-color: #4caf50;">Bioskop</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-raised-button routerLink="/sala" style="background-color: #2196f3;">Sala</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-raised-button routerLink="/film" style="background-color: #9c27b0;">Film</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-raised-button routerLink="/rezervacija" style="background-color: #ff9800;">Rezervacija</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <!-- Sekcija: Informacije -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Informacije </mat-panel-title>
+          <mat-panel-description> O aplikaciji i autoru </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-nav-list>
+          <a mat-button routerLink="/about">O aplikaciji</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button routerLink="/author">Autor</a>
+        </mat-nav-list>
+        <mat-nav-list>
+          <a mat-button routerLink="/home">Početna</a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+
+  <!-- Glavni prikaz (komponente se menjaju ovde) -->
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

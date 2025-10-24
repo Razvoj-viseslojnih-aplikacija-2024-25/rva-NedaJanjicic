@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+mat-toolbar {
+  justify-content: center;
+  background-color: #4caf50;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 16px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}

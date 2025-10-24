@@ -1,0 +1,29 @@
+<div class="home-container">
+  <mat-card class="home-card">
+    <mat-card-header>
+      <mat-icon class="home-icon">theaters</mat-icon>
+      <mat-card-title>Dobrodošli u aplikaciju Bioskop</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        Ova aplikacija omogućava pregled, dodavanje, izmenu i brisanje informacija
+        o bioskopima, salama, filmovima i rezervacijama.  
+        Kreirana je pomoću <strong>Angular</strong> i <strong>Spring Boot</strong> tehnologija.
+      </p>
+
+      <p>
+        Izaberite željenu opciju iz menija sa leve strane i započnite sa radom.
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" routerLink="/bioskop">
+        <mat-icon>movie</mat-icon> Prikaz bioskopa
+      </button>
+      <button mat-raised-button color="accent" routerLink="/author">
+        <mat-icon>person</mat-icon> O autoru
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,57 @@
+.author-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+  height: calc(100vh - 80px);
+}
+
+.author-card {
+  max-width: 750px;
+  width: 100%;
+  padding: 24px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.author-icon {
+  color: #3f51b5;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.author-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3f51b5;
+}
+
+h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}

@@ -1,0 +1,38 @@
+<div class="author-container">
+  <mat-card class="author-card">
+    <mat-card-header>
+      <mat-icon class="author-icon">person</mat-icon>
+      <mat-card-title>Autor aplikacije</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="author-info">
+        <img
+          src="assets/profile-placeholder.png"
+          alt="Autor"
+          class="author-image"
+        />
+        <div>
+          <h2>Neda Janjičić</h2>
+          <p>
+            Studentkinja IT smera sa iskustvom u web programiranju.  
+            Autor ovog projekta — aplikacije za upravljanje bioskopima, salama, filmovima i rezervacijama.
+          </p>
+          <p>
+            Tehnologije korišćene: <strong>Angular</strong>, <strong>Spring Boot</strong>, 
+            <strong>PostgreSQL</strong> i <strong>Material Design</strong>.
+          </p>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" routerLink="/about">
+        <mat-icon>info</mat-icon> O aplikaciji
+      </button>
+      <button mat-raised-button color="accent" routerLink="/home">
+        <mat-icon>home</mat-icon> Pocetna
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

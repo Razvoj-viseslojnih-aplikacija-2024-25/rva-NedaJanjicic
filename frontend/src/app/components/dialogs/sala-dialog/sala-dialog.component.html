@@ -1,0 +1,28 @@
+<div class="container">
+  <h3 *ngIf="flag == 1">Dodavanje sale</h3>
+  <h3 *ngIf="flag == 2">Izmena sale ID: {{ data.id }}</h3>
+  <h3 *ngIf="flag == 3">Brisanje sale ID: {{ data.id }}</h3>
+
+  <form #formControl="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Kapacitet" [(ngModel)]="data.kapacitet" name="kapacitet" [disabled]="flag==3" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Broj redova" [(ngModel)]="data.brojRedova" name="brojRedova" [disabled]="flag==3" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Bioskop" [(ngModel)]="data.bioskop" name="bioskop" [compareWith]="compare" [disabled]="flag==3" required>
+        <mat-option *ngFor="let b of bioskopi" [value]="b">{{ b.naziv }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+  <div class="actions">
+    <button mat-button *ngIf="flag == 1" (click)="add()">Sačuvaj</button>
+    <button mat-button *ngIf="flag == 2" (click)="update()">Izmeni</button>
+    <button mat-button *ngIf="flag == 3" (click)="delete()">Obriši</button>
+    <button mat-button (click)="cancel()">Odustani</button>
+  </div>
+</div>

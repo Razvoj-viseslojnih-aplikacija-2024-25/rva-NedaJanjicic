@@ -1,0 +1,30 @@
+<div class="container">
+  <h3 *ngIf="flag == 1">Dodavanje filma</h3>
+  <h3 *ngIf="flag == 2">Izmena filma: {{ data.naziv }}</h3>
+  <h3 *ngIf="flag == 3">Brisanje filma: {{ data.naziv }}</h3>
+
+  <form #formControl="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Naziv" [(ngModel)]="data.naziv" name="naziv" [disabled]="flag==3" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Recenzija" [(ngModel)]="data.recenzija" name="recenzija" [disabled]="flag==3" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" placeholder="Trajanje (min)" [(ngModel)]="data.trajanje" name="trajanje" [disabled]="flag==3" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Žanr" [(ngModel)]="data.zanr" name="zanr" [disabled]="flag==3" />
+    </mat-form-field>
+  </form>
+
+  <div class="actions">
+    <button mat-button *ngIf="flag == 1" (click)="add()">Sačuvaj</button>
+    <button mat-button *ngIf="flag == 2" (click)="update()">Izmeni</button>
+    <button mat-button *ngIf="flag == 3" (click)="delete()">Obriši</button>
+    <button mat-button (click)="cancel()">Odustani</button>
+  </div>
+</div>
