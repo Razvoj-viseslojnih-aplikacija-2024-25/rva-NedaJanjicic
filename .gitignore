@@ -1,0 +1,18 @@
+# === IGNORIŠI IDE FAJLOVE ===
+.metadata/
+.classpath
+.project
+.settings/
+
+# === IGNORIŠI BUILD I TEMP FAJLOVE ===
+target/
+build/
+dist/
+
+# === IGNORIŠI NODE MODULES ===
+frontend/node_modules/
+frontend/dist/
+
+# === OSTALO ===
+.DS_Store
+Thumbs.db
